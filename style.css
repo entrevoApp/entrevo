@@ -330,6 +330,11 @@
     transform: scale(1.05);
     box-shadow: 0 4px 12px rgba(0,0,0,0.2);
   }
+  .waitlist-form input[type="email"]:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(255, 140, 0, 0.2); /* Efecto glow sutil */
+    border-radius: 40px 0 0 40px; /* Asegura que mantenga la silueta redondeada */
+  }
   
   /* Gradient “snake” animation */
   @keyframes gradientShift {
