@@ -258,10 +258,7 @@
       grid-template-columns: 1fr;
     }
     .flip-card-inner {
-      min-height: 600px;
-    }
-    .flip-front, .flip-back {
-      font-size: 1.2rem;
+      min-height: 800px;
     }
     #hero {
         text-align: center;
