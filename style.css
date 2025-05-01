@@ -94,6 +94,9 @@
     color: #ff4500;
     font-size: 2rem;
   }
+  .scroll-cue-phone {
+    display: none;
+  }
   @keyframes bounce {
     0%,100% { transform: translate(-50%,0); }
     50% { transform: translate(-50%,8px); }
@@ -237,7 +240,10 @@
     margin-bottom: 30px;
     font-size: 1.1rem;
   }
-  
+  @keyframes bounceY {
+    0%, 100% { transform: translateY(0); }
+    50%      { transform: translateY(8px); }
+  }
   /* Responsive tweaks */
   @media (max-width: 600px) {
     .bio-main {
@@ -283,6 +289,20 @@
       }
       .flip-front, .flip-back {
         font-size: 1.05rem;
+      }
+      .scroll-cue-phone {
+        /* Flow-based centering */
+        position: static;
+        display: block;
+        margin: 20px auto 0;
+        text-align: center;
+
+        /* Styling */
+        font-size: 2rem;
+        color: #ff4500;
+
+        /* Bounce */
+        animation: bounceY 2s infinite;
       }
   }
 
@@ -387,8 +407,12 @@
   }
   @media (max-width: 600px) {
     .site-header{
-        justify-content: center;
-        padding-bottom: 40px;
+        padding-left: 10px;
+        padding-bottom: 20px;
+    }
+    .site-logo{
+        width: 42px;
+        height: 42px;
     }
   }
   
