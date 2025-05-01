@@ -281,6 +281,9 @@
         left: 50%;
         transform: translateX(-50%);
       }
+      .flip-front, .flip-back {
+        font-size: 1.05rem;
+      }
   }
 
 /* ───────── Waitlist Form (Hero & Footer) ───────── */
@@ -347,6 +350,19 @@
     .waitlist-form {
       margin: 16px auto;
     }
+    .waitlist-form .subscribe-btn {
+        padding: 16px 18px;
+        border: none;
+        font-size: 1rem;
+        font-weight: 700;
+        color: #fff;
+        cursor: pointer;
+        background: linear-gradient(120deg, #ff9100, #ff4800, #ff9100);
+        
+        background-size: 600% 100%;
+        animation: gradientShift 12s linear infinite;
+        transition: transform .2s, box-shadow .2s;
+      }
   }
 
 /* ───────── Header con logo ───────── */
@@ -372,6 +388,7 @@
   @media (max-width: 600px) {
     .site-header{
         justify-content: center;
+        padding-bottom: 40px;
     }
   }
   
