@@ -235,4 +235,31 @@
     };
     document.getElementById('topWaitlistBtn').onclick = askEmail;
     document.getElementById('bottomWaitlistBtn').onclick = askEmail;
+
+    // Waitlist form dual-submit (Mailchimp + Google Sheets)
+    document.addEventListener('DOMContentLoaded', () => {
+        const forms = document.querySelectorAll('.waitlist-form');
+    
+        forms.forEach(form => {
+        form.addEventListener('submit', (e) => {
+            // Get the email from the input
+            const emailInput = form.querySelector('input[name="EMAIL"]');
+            const email = emailInput?.value?.trim();
+    
+            // Send to Google Sheets if email exists
+            if (email) {
+            fetch("https://script.google.com/macros/s/AKfycbzKhc6JO-pE6yJFD0W2FAB9BTNj60C08wbBqqk0r9IdcW327gNq8n4JZrOsPqw70vsI/exec", {
+                method: "POST",
+                headers: { "Content-Type": "application/x-www-form-urlencoded" },
+                body: `email=${encodeURIComponent(email)}`
+            }).catch(err => {
+                console.error("Google Sheets submission error:", err);
+            });
+            }
+    
+            // Mailchimp will handle its own redirect / result
+        });
+        });
+    });
+  
   })();
