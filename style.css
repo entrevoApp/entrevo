@@ -258,7 +258,7 @@
       grid-template-columns: 1fr;
     }
     .flip-card-inner {
-      min-height: 600px;
+      min-height: 650px;
     }
     #hero {
         text-align: center;
