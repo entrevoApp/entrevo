@@ -353,17 +353,25 @@
 .site-header {
     background: transparent;  
     margin-bottom: 0;         /* quita separación extra si la hubiese */
-    padding: 16px 24px;
+    padding: 16px 20px;
     display: flex;
     align-items: center;
+    width: 100%;
+    justify-content: flex-start; 
     padding-bottom: 70px;
   }
   
   .site-logo {
     background: transparent;  /* si tu imagen tiene zonas transparentes */
-    width: 48px;
-    height: 48px;
+    width: 56px;
+    height: 56px;
     border-radius: 12px;
     object-fit: cover;
+    
+  }
+  @media (max-width: 600px) {
+    .site-header{
+        justify-content: center;
+    }
   }
   
