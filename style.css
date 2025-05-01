@@ -42,7 +42,7 @@
   
   /* Hero -------------------- */
   #hero {
-    padding-top: 120px;
+    padding-top: 20px;
     background: linear-gradient(120deg, rgba(255,140,0,.1), rgba(255,255,255,0));
     position: relative;
   }
@@ -348,3 +348,22 @@
       margin: 16px auto;
     }
   }
+
+/* ───────── Header con logo ───────── */
+.site-header {
+    background: transparent;  
+    margin-bottom: 0;         /* quita separación extra si la hubiese */
+    padding: 16px 24px;
+    display: flex;
+    align-items: center;
+    padding-bottom: 70px;
+  }
+  
+  .site-logo {
+    background: transparent;  /* si tu imagen tiene zonas transparentes */
+    width: 48px;
+    height: 48px;
+    border-radius: 12px;
+    object-fit: cover;
+  }
+  
